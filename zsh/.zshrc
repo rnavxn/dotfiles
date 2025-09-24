@@ -84,3 +84,6 @@ function y() {
 	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+# For hyprls
+export PATH="$HOME/go/bin:$PATH"
