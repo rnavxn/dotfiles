@@ -39,12 +39,12 @@ require('lazy').setup {
   require 'plugins.misc',
 }
 
--- Added for hyprls lsp configuration
--- Hyprlang LSP
+-- Hyprlang LSP Autocommand
 vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
   pattern = { '*.hl', 'hypr*.conf' },
   callback = function(event)
-    print(string.format('starting hyprls for %s', vim.inspect(event)))
+    -- The print statement is optional for debugging
+    -- print(string.format('starting hyprls for %s', vim.inspect(event)))
     vim.lsp.start {
       name = 'hyprlang',
       cmd = { 'hyprls' },

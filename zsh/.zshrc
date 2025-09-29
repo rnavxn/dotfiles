@@ -70,6 +70,7 @@ alias ls='ls --color'
 alias c='clear'
 alias up='sudo pacman -Syu'
 alias dl='sudo pacman -Rns'
+alias ipa='ip -c a'
 
 # Shell integrations
 eval "$(fzf --zsh)"
