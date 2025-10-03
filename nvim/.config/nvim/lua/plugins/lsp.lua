@@ -114,20 +114,6 @@ return {
           })
         end
 
-        -- -- Hyprlang LSP Autocommand
-        -- vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
-        --   pattern = { '*.hl', 'hypr*.conf' },
-        --   callback = function(event)
-        --     -- The print statement is optional for debugging
-        --     print(string.format('starting hyprls for %s', vim.inspect(event)))
-        --     vim.lsp.start {
-        --       name = 'hyprlang',
-        --       cmd = { 'hyprls' },
-        --       root_dir = vim.fn.getcwd(),
-        --     }
-        --   end,
-        -- })
-
         -- The following code creates a keymap to toggle inlay hints in your
         -- code, if the language server you are using supports them
         if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
