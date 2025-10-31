@@ -203,7 +203,7 @@ return {
       -- tailwindcss = {},
       -- graphql = {},
       -- html = { filetypes = { 'html', 'twig', 'hbs' } },
-      -- cssls = {},
+      cssls = {},
       -- ltex = {},
       -- texlab = {},
     }

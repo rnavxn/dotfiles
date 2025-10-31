@@ -42,8 +42,9 @@ autoload -U compinit && compinit
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
-bindkey -e
-
+# bindkey -e
+bindkey '^[[3~' delete-char
+bindkey '^[[3;3~' kill-word
 
 # History
 HISTSIZE=5000
@@ -69,22 +70,14 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath '
 alias ls='ls --color'
 alias c='clear'
 alias up='sudo pacman -Syu'
+alias pup='paru -Syu'
 alias dl='sudo pacman -Rns'
-alias ipa='ip -c a'
+alias cleanup='sudo pacman -Rns $(pacman -Qdtq)'
+alias ws='nmcli device wifi'
+alias search='paru -Ss'
+alias inst='paru -S'
 
 # Shell integrations
 eval "$(fzf --zsh)"
 # eval "$(zoxide init --cmd cd zsh)"
 eval "$(zoxide init zsh)"
-
-
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
-}
-
-# For hyprls
-export PATH="$HOME/go/bin:$PATH"

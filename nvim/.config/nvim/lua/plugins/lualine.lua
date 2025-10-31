@@ -37,7 +37,7 @@ return {
     }
 
     -- Import color theme based on environment variable NVIM_THEME
-    local env_var_nvim_theme = os.getenv 'NVIM_THEME' or 'nord'
+    local env_var_nvim_theme = os.getenv 'NVIM_THEME' or 'cappuchin' -- 'nord'
 
     -- Define a table of themes
     local themes = {
@@ -56,7 +56,7 @@ return {
     local filename = {
       'filename',
       file_status = true, -- displays file status (readonly status, modified status)
-      path = 0,           -- 0 = just filename, 1 = relative path, 2 = absolute path
+      path = 0, -- 0 = just filename, 1 = relative path, 2 = absolute path
     }
 
     local hide_in_width = function()
