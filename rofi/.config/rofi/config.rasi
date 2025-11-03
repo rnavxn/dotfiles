@@ -1,0 +1,70 @@
+configuration {
+    // modes: "run,drun,ssh";                   // Ensure 'drun' is in your modes list
+    modi: "drun,calc,run";                          // Same in more dynamic way
+    show-icons: true;
+    drun-icon-theme: "Tela-nord-dark";          // Set your preferred icon theme (e.g., Papirus, Adwaita, Numix)
+    drun-display-format: "{icon} {name}";       // Format to show icon and then name (optional, but good practice)
+    terminal: "kitty";                          // Setting default terminal
+}
+
+* {
+    // Define all your base colors here
+    background: rgba(36, 39, 58, 0.5);
+    foreground: #FFFFFF; // A light color for main text
+
+    // background: rgba(36, 39, 58, 0.8);      // Main background (80% opacity)
+    // alt-background: rgba(36, 39, 58, 0.5);  // Alternate background (50% opacity)
+    // foreground: #ABB2BF;                    // Text color
+    // Define the single color you want everywhere for transparency
+
+    // base-bg: rgba(36, 39, 58, 0.8); 
+    // foreground: #ABB2BF;             // Text color
+    // selected-bg: rgba(60, 65, 90, 0.9); // Highlight color
+    // // Ensure colors defined here don't override transparency later
+    // background-color: @base-bg;
+}
+
+window {
+    background-color: @background;
+    transparency: "real"; // Recommended for Hyprland blur
+}
+
+// Fix the text color in the main input area
+inputbar {
+    text-color: @foreground; 
+}
+
+prompt {
+    text-color: #FFFFFF; // A light color, matching your foreground
+}
+
+// Fix the text color for all list elements
+element-text {
+    text-color: @foreground;
+    background-color: inherit; /* This is crucial for recent Rofi versions */
+}
+
+/* Normal (even) rows */
+element.normal.normal {
+    background-color: inherit; /* Uses the semi-transparent main background */
+    text-color: @foreground;
+}
+
+/* Alternate (odd) rows */
+element.alternate.normal {
+    // background-color: rgba(36, 39, 58, 0.5); /* Slightly more transparent for a subtle effect */
+    background-color: inherit; /* Slightly more transparent for a subtle effect */
+    text-color: @foreground;
+}
+
+/* Selected row (when you highlight an item with arrow keys) */
+element.selected.normal {
+    background-color: rgba(60, 65, 90, 0.9); /* A slightly different color for selection */
+    text-color: #FFFFFF; /* White text for selected item */
+}
+
+listview {
+    spacing: 0px;           // This is probably causing your visible "gaps" of opaque color
+    padding: 5px;           // You might also have padding here, which you can keep or adjust:
+    fixed-height: false;    // Ensure fixed height is off for dynamic shrinking
+}
