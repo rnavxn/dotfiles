@@ -76,7 +76,7 @@
   "pulseaudio": {
     "scroll-step": 1,
     "format": "{icon}",
-    "on-click": "ghostty --class=local.wiremix -e wiremix",
+    "on-click": "pavucontrol",
     "on-click-right": "pamixer -t",
     "tooltip-format": "Playing at {volume}%",
     "format-muted": "",
@@ -91,7 +91,7 @@
     "format-disabled": "󰂲",
     "format-connected": "",
     "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "ghostty --class=local.bluetui -e bluetui"
+    "on-click": "blueman-manager"
   },
 
   // Battery
@@ -127,7 +127,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "kitty --class=local.impala -e impala"
+    "on-click": "kitty -e nmtui"
   },
 
   // Quicklinks
