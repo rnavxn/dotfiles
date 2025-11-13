@@ -1,44 +1,123 @@
 {
     // General Settings
-    "reload_style_on_change": true,
-    "layer": "top",
-    "position": "top",
-    "spacing": 0,
-    "height": 26,
+    // "reload_style_on_change": true,
+    // "layer": "top",
+    // "position": "top",
+    // "spacing": 0,
+    // "height": 26,
     "include": [
         "~/.config/waybar/modules.json",
-        "~/.config/waybar/modules/*",
+        "~/.config/waybar/modules/*"
     ],
+    "layer": "top",
+    "output": [ "*" ],
+    "position": "top",
+    "mod": "dock",
+    "height": 30,
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "reload_style_on_change": true,
 
+    // "hyprland/workspaces": {
+    //   "on-click": "activate",
+    //   "format": "{icon}",
+    //   "format-icons": {
+    //     "default": "",
+    //     "1": "1",
+    //     "2": "2",
+    //     "3": "3",
+    //     "4": "4",
+    //     "5": "5",
+    //     "6": "6",
+    //     "7": "7",
+    //     "8": "8",
+    //     "9": "9",
+    //     "active": "󱓻"
+    //   },
+    //   "persistent-workspaces": {
+    //     "1": [],
+    //     "2": [],
+    //     "3": [],
+    //     "4": [],
+    //     "5": []
+    //   }
+    // },
     "hyprland/workspaces": {
-      "on-click": "activate",
-      "format": "{icon}",
-      "format-icons": {
-        "default": "",
-        "1": "1",
-        "2": "2",
-        "3": "3",
-        "4": "4",
-        "5": "5",
-        "6": "6",
-        "7": "7",
-        "8": "8",
-        "9": "9",
-        "active": "󱓻"
-      },
-      "persistent-workspaces": {
-        "1": [],
-        "2": [],
-        "3": [],
-        "4": [],
-        "5": []
-      }
+        "rotate": 0,
+        "all-outputs": true,
+        "active-only": false,
+        "on-click": "activate",
+        "disable-scroll": false,
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1",
+        "format": "{icon}",
+        "persistent-workspaces": {
+            "*": 5
+        },
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十",
+            "11": "十一",
+            "12": "十二",
+            "13": "十三",
+            "14": "十四",
+            "15": "十五",
+            "16": "十六",
+            "17": "十七",
+            "18": "十八",
+            "19": "十九",
+            "20": "二十",
+            "urgent": "",
+            "focused": "",
+            "default": " "
+        }
+    },
+
+
+    "wlr/taskbar": {
+        "all-outputs": true,
+        "active-first": true,
+        "markup": true,
+        "format": "{icon}",
+        "rotate": "0",
+        "icon-size": 26,
+        "icon-theme": "Tela-nord-dark",
+        "spacing": 0,
+        "tooltip-format": "{title}{app_id}",
+        "on-click": "activate",
+        "on-click-right": "fullscreen",
+        "on-click-middle": "close",
+        "ignore-list": [
+            ""
+            //"Spotify Free"
+        ],
+        "app_ids-mapping": {
+            "firefoxdeveloperedition": "firefox-developer-edition",
+            "firefoxnightly": "firefox-nightly",
+            "Spotify Free": "Spotify"
+        },
+        "rewrite": {
+            "Firefox Web Browser": "Firefox",
+            "Foot Server": "Terminal",
+            "Spotify Free": "Spotify",
+            "org.kde.dolphin": "dolphin",
+            "libreoffice-writer": "writer"
+        }
     },
 
     // Modules Left
     "modules-left": [
         "hyprland/workspaces",
-        "custom/filemanager"
+        "wlr/taskbar"
     ],
 
     // Modules Center
@@ -59,6 +138,7 @@
         "battery",
         "custom/exit"
     ],
+
     "idle_inhibitor": {
         "format": "{icon}",
         "rotate": 0,
@@ -76,39 +156,6 @@
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
         "tooltip-format": "{icon} {percent}% ",
-        "on-scroll-up": "brightnesscontrol.sh i 1",
-        "on-scroll-down": "brightnesscontrol.sh d 1",
         "min-length": 6
     },
-
-    // "custom/cava": {
-    //     "cava_config": "~/.config/waybar/scripts/cava.py",
-    //     "framerate": 30,
-    //     "autosens": 1,
-    //     "sensitivity": 100,
-    //     "bars": 14,
-    //     "lower_cutoff_freq": 50,
-    //     "higher_cutoff_freq": 10000,
-    //     "method": "pulse",
-    //     "source": "auto",
-    //     "stereo": true,
-    //     "reverse": false,
-    //     "bar_delimiter": 0,
-    //     "monstercat": false,
-    //     "waves": false,
-    //     "noise_reduction": 0.77,
-    //     "input_delay": 2,
-    //     "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-    //     "actions": {
-    //         "on-click-right": "mode"
-    //     }
-    // }
-
-    // "idle_inhibitor": {
-    //     "format": "{icon}",
-    //     "format-icons": {
-    //         "activated": "  ",
-    //         "deactivated": "  "
-    //     }
-    // },
 }
