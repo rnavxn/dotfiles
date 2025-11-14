@@ -1,6 +1,0 @@
-"custom/volume-bars": {
-  "exec": "~/.config/waybar/scripts/volume-bars.sh",
-  "interval": 0.05,
-  "return-type": "text",
-  "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
-}

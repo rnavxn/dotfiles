@@ -1,0 +1,9 @@
+{
+    // Testing module, not recommened to use. It sucls now.
+    "custom/taskbar": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/taskbar-filter.sh",
+        "interval": 1, // Refresh the module every second
+        "tooltip": false
+    }
+}

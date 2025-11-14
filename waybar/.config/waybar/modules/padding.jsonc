@@ -1,0 +1,7 @@
+{
+    "custom/padd": {
+        "format": " ",
+        "interval" : "once",
+        "tooltip": false
+    }
+}

@@ -1,161 +1,39 @@
 {
-    // General Settings
-    // "reload_style_on_change": true,
-    // "layer": "top",
-    // "position": "top",
-    // "spacing": 0,
-    // "height": 26,
-    "include": [
-        "~/.config/waybar/modules.json",
-        "~/.config/waybar/modules/*"
-    ],
-    "layer": "top",
-    "output": [ "*" ],
-    "position": "top",
-    "mod": "dock",
-    "height": 30,
+    "layer": "top",             // Waybar at top layer
+    "position": "top",          // Waybar position (top|bottom|left|right)
+    "output": ["*"],            // Show on all displays
+    "height": 32,               // Waybar height (to be removed for auto height)
+    "spacing": 4,               // Gaps between modules (4px)
+    "mode": "dock",             // Dock behavior
     "exclusive": true,
-    "passthrough": false,
-    "gtk-layer-shell": true,
+    "passthrough": false,       // Option to pass any pointer events to the window under the bar
     "reload_style_on_change": true,
 
-    // "hyprland/workspaces": {
-    //   "on-click": "activate",
-    //   "format": "{icon}",
-    //   "format-icons": {
-    //     "default": "",
-    //     "1": "1",
-    //     "2": "2",
-    //     "3": "3",
-    //     "4": "4",
-    //     "5": "5",
-    //     "6": "6",
-    //     "7": "7",
-    //     "8": "8",
-    //     "9": "9",
-    //     "active": "󱓻"
-    //   },
-    //   "persistent-workspaces": {
-    //     "1": [],
-    //     "2": [],
-    //     "3": [],
-    //     "4": [],
-    //     "5": []
-    //   }
-    // },
-    "hyprland/workspaces": {
-        "rotate": 0,
-        "all-outputs": true,
-        "active-only": false,
-        "on-click": "activate",
-        "disable-scroll": false,
-        "on-scroll-up": "hyprctl dispatch workspace -1",
-        "on-scroll-down": "hyprctl dispatch workspace +1",
-        "format": "{icon}",
-        "persistent-workspaces": {
-            "*": 5
-        },
-        "format-icons": {
-            "1": "一",
-            "2": "二",
-            "3": "三",
-            "4": "四",
-            "5": "五",
-            "6": "六",
-            "7": "七",
-            "8": "八",
-            "9": "九",
-            "10": "十",
-            "11": "十一",
-            "12": "十二",
-            "13": "十三",
-            "14": "十四",
-            "15": "十五",
-            "16": "十六",
-            "17": "十七",
-            "18": "十八",
-            "19": "十九",
-            "20": "二十",
-            "urgent": "",
-            "focused": "",
-            "default": " "
-        }
-    },
+    "include": [
+        "./modules/workspaces.jsonc",
+        "./modules/clock.jsonc",
+        "./modules/phoenix.jsonc",
+        "./modules/taskbar.jsonc",
+        "./modules/network.jsonc",
+        "./modules/padding.jsonc",
+        "./modules/battery.jsonc",
+        "./modules/idle_inhibitor.jsonc"
+    ],
 
-
-    "wlr/taskbar": {
-        "all-outputs": true,
-        "active-first": true,
-        "markup": true,
-        "format": "{icon}",
-        "rotate": "0",
-        "icon-size": 26,
-        "icon-theme": "Tela-nord-dark",
-        "spacing": 0,
-        "tooltip-format": "{title}{app_id}",
-        "on-click": "activate",
-        "on-click-right": "fullscreen",
-        "on-click-middle": "close",
-        "ignore-list": [
-            ""
-            //"Spotify Free"
-        ],
-        "app_ids-mapping": {
-            "firefoxdeveloperedition": "firefox-developer-edition",
-            "firefoxnightly": "firefox-nightly",
-            "Spotify Free": "Spotify"
-        },
-        "rewrite": {
-            "Firefox Web Browser": "Firefox",
-            "Foot Server": "Terminal",
-            "Spotify Free": "Spotify",
-            "org.kde.dolphin": "dolphin",
-            "libreoffice-writer": "writer"
-        }
-    },
-
-    // Modules Left
     "modules-left": [
+        // "custom/padd",
+        "custom/phoenix",
         "hyprland/workspaces",
+        "custom/padd",
         "wlr/taskbar"
     ],
-
-    // Modules Center
     "modules-center": [
         "idle_inhibitor",
-        "clock",
+        "clock"
     ],
-
-    // Modules Right
     "modules-right": [
-        "custom/updates",
-        "pulseaudio",
-        "backlight",
-        "bluetooth",
         "network",
-        "cpu",
-        "custom/hypridle",
         "battery",
-        "custom/exit"
-    ],
-
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "rotate": 0,
-        "format-icons": {
-            "activated": " 󰅶 ",
-            "deactivated": " 󰛊 "
-        },
-        "tooltip-format-activated":"Caffeine Mode Active",
-        "tooltip-format-deactivated":"Caffeine Mode Inactive"
-    },
-
-    "backlight": {
-        "device": "intel_backlight",
-        "rotate": 0,
-        "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "tooltip-format": "{icon} {percent}% ",
-        "min-length": 6
-    },
+        "custom/padd"
+    ]
 }

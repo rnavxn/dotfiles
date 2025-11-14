@@ -1,8 +1,20 @@
-/* @import "../../.local/share/dotfiles/current/theme/waybar.css"; */
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "CaskaydiaCove Nerd Font";
+    font-weight: bold;
+    font-size: 12px;
+}
 
-@define-color foreground #FFFFFF;
-@define-color background #181824;
-
+/* :root {
+    --bar-bg: rgba(0, 0, 0, 0);
+    --main-bg: #11111b;
+    --main-fg: #cdd6f4;
+    --wb-act-bg: #a6adc8;
+    --wb-act-fg: #313244;
+    --wb-hvr-bg: #f5c2e7;
+    --wb-hvr-fg: #313244;
+} */
 
 @define-color bar-bg rgba(0, 0, 0, 0);
 
@@ -15,157 +27,97 @@
 @define-color wb-hvr-bg #f5c2e7;
 @define-color wb-hvr-fg #313244;
 
-
-* {
-    background-color: transparent;
-    color: @foreground;
-
-    border: none;
-    border-radius: 0;
-    min-height: 0;
-    font-family: Inter;
-    font-size: 16px;
-}
-
 window#waybar {
-    background-color: alpha(@background, 0.9);
+    background: @bar-bg;
 }
 
-.modules-left {
-    margin: 8px 0px 8px 10px;
+tooltip {
+    background: @main-bg;
+    color: @main-fg;
+    border-radius: 3px;
+    border-width: 0px;
 }
 
-.modules-right {
-    margin: 8px 10px 8px 0px;
+#custom-phoenix {
+    font-size: 10px;
+    background-image: url('./img/—Pngtree—fiery\ phoenix\ bird_18957407.png'); /* Replace with the actual path to your PNG */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; /* Or 'cover' or a specific size */
+    padding-left: 32px;
 }
 
 #workspaces button {
     box-shadow: none;
 	text-shadow: none;
-    padding: 0px;
-    /* border-radius: 9px; */
-    margin-top: 1px;
-    margin-bottom: 1px;
-    margin-left: 2.5px;
-    padding-left: 2px;
-    padding-right: 2px;
-    margin-right: 2.5px;
     color: @main-fg;
     animation: ws_normal 10s ease-in-out 1;
 }
 
 #workspaces button.active {
-    /* background: @wb-act-bg; */
     background: linear-gradient(to bottom, @wb-act-bg, transparent);
-    /* background: radial-gradient(circle, @wb-act-bg,, transparent); */
-    color: @wb-act-fg;
-    /* color: white; */
-    margin-left: 1.5px;
-    padding-left: 7px;
-    padding-right: 7px;
-    margin-right: 1.5px;
-    border-radius: 0px;
     animation: ws_active 20s ease-in-out 1;
     transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button:hover {
-    /* background: @wb-hvr-bg; */
     background: linear-gradient(to bottom, @wb-hvr-bg, transparent);
-    color: @wb-hvr-fg;
-    margin-left: 1.5px;
-    padding-left: 7px;
-    padding-right: 7px;
-    margin-right: 1.5px;
-    /* border-radius: 10px; */
+    /* color: white; */
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
-
 #taskbar button {
     box-shadow: none;
 	text-shadow: none;
-    padding: 0px;
-    /* border-radius: 9px; */
-    margin-top: 1px;
-    margin-bottom: 1px;
-    margin-left: 2px;
-    padding-left: 2px;
-    padding-right: 2px;
-    margin-right: 2px;
+    padding: 0px 1px;
+    margin: 0px 2px;
     color: @wb-color;
     animation: tb_normal 20s ease-in-out 1;
 }
 
 #taskbar button.active {
-    /* background: @wb-act-bg; */
     background: linear-gradient(to bottom, @wb-act-bg, transparent);
-    /* border-radius: 12px; */
     color: @wb-act-color;
-    margin-left: 1.5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-right: 1.5px;
+    padding: 0px 7px;
     animation: tb_active 20s ease-in-out 1;
     transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #taskbar button:hover {
-    /* background: @wb-hvr-bg; */
     background: linear-gradient(to bottom, @wb-hvr-bg, transparent);
     color: @wb-hvr-color;
-    /* border-radius: 12px; */
-    margin-left: 1.5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-right: 1.5px;
+    padding: 0px 7px;
     animation: tb_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
-
-/* #workspaces button {
-    all: initial;
-    padding: 0 6px;
-    margin: 0 1.5px;
-    min-width: 9px;
+#idle_inhibitor {
+    font-size: 16px;
+    margin-top: 1px;
+    padding: 0px 3px;
 }
 
-#workspaces button.empty {
-    opacity: 0.5;
-} */
+#clock {
+    font-family: Inter;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
 
-#cpu,
-#bluetooth,
-#pulseaudio,
 #network,
-#clock,
-#battery,
-#custom-exit,
-#custom-openwebui,
-#custom-brightness,
-#custom-hypridle,
-#custom-filemanager {
+#battery {
     min-width: 12px;
     margin: 0 8px;
     font-size: 16px;
 }
 
-
-#clock {
-    /* font-weight: ; */
-}
-
-#custom-hypridle.notactive {
-    color: rgb(224, 137, 137);
-}
-tooltip {
-    background-color: alpha(@background, 0.9);
-    padding: 20px;
-    margin: 0px;
-}
-
-tooltip label {
-    color: @foreground;
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }

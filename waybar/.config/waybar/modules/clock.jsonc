@@ -1,0 +1,19 @@
+{
+    "clock": {
+        "format": "{:%I:%M %p}",               // 09:24 PM
+        "format-alt": "{:%d %B %Y}",           // 14 November 2025
+        "on-click": "mode",
+        "on-click-right": "hyprctl dispatch exec gsimplecal",
+        "tooltip": true,
+        "tooltip-format": "<span>{calendar}</span>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "format": {
+                "months": "<span foreground='#89b4fa'><b>{}</b></span>",
+                "weekdays": "<span foreground='#f38ba8'><b>{}</b></span>",
+                "today": "<span foreground='#a6e3a1'><b>{}</b></span>"
+            }
+        }
+    }
+}
