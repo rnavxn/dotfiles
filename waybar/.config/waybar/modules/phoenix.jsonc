@@ -3,6 +3,7 @@
         "exec": "echo ' '", // This provides an empty space for the background image
         "interval": 0,
         "format": "{}",
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "kitty"
     }
 }

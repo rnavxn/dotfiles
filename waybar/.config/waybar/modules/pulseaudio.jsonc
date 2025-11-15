@@ -1,0 +1,20 @@
+{
+    "pulseaudio": {
+        // "format": "{icon} {volume}",
+        "format": "{icon}",
+        "rotate": 0,
+        "format-muted": "",
+        "on-click": "pavucontrol -t 3",
+        "tooltip-format": "{icon} {desc} |  {volume}%",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        }
+    }
+}

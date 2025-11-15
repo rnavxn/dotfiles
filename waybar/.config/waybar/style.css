@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0px;
-    font-family: "CaskaydiaCove Nerd Font";
+    font-family: "FiraCode Nerd Font", "CaskaydiaCove Nerd Font";
     font-weight: bold;
     font-size: 12px;
 }
@@ -18,13 +18,13 @@
 
 @define-color bar-bg rgba(0, 0, 0, 0);
 
-@define-color main-bg #11111b;
+@define-color main-bg rgba(0, 0, 0, 0.7);
 @define-color main-fg #cdd6f4;
 
-@define-color wb-act-bg #a6adc8;
+@define-color wb-act-bg #b32020;
 @define-color wb-act-fg #313244;
 
-@define-color wb-hvr-bg #f5c2e7;
+@define-color wb-hvr-bg #ff3b30;
 @define-color wb-hvr-fg #313244;
 
 window#waybar {
@@ -38,6 +38,10 @@ tooltip {
     border-width: 0px;
 }
 
+tooltip label {
+    font-weight: 500;
+}
+
 #custom-phoenix {
     font-size: 10px;
     background-image: url('./img/—Pngtree—fiery\ phoenix\ bird_18957407.png'); /* Replace with the actual path to your PNG */
@@ -48,19 +52,23 @@ tooltip {
 }
 
 #workspaces button {
+    font-weight: 700;
     box-shadow: none;
 	text-shadow: none;
+    font-weight: bold;
     color: @main-fg;
     animation: ws_normal 10s ease-in-out 1;
 }
 
 #workspaces button.active {
+    font-weight: bold;
     background: linear-gradient(to bottom, @wb-act-bg, transparent);
     animation: ws_active 20s ease-in-out 1;
     transition: all 0.4s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
 #workspaces button:hover {
+    font-weight: bold;
     background: linear-gradient(to bottom, @wb-hvr-bg, transparent);
     /* color: white; */
     animation: ws_hover 20s ease-in-out 1;
@@ -105,19 +113,58 @@ tooltip {
     letter-spacing: 0px;
 }
 
+#backlight,
+#pulseaudio,
+#bluetooth,
 #network,
 #battery {
-    min-width: 12px;
-    margin: 0 8px;
+    color: white;
+    min-width: 30px;
+    margin: 0px;
     font-size: 16px;
+    /* background-color: navy;        This line is used to see icon alignments */
 }
 
+#backlight {
+    margin: 0px -15px;
+}
+
+#network {
+    margin-left: -5px;
+    /* padding-right: 5px; */
+}
+
+@keyframes blink {
+    to {
+        /* background-color: transparent; */
+        background: linear-gradient(to bottom, #ff3b30, transparent);
+    }
+}
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
-    color: #ffffff;
+    color: initial;
     animation-name: blink;
     animation-duration: 0.5s;
-    animation-timing-function: steps(12);
+    animation-timing-function: steps(10);
     animation-iteration-count: infinite;
     animation-direction: alternate;
+}
+#battery.charging, #battery.plugged {
+    background: linear-gradient(to bottom, #34DB70, transparent);
+}
+
+#custom-cava {
+    margin: 0px 2px;
+}
+
+#custom-spotify {
+    padding: 0px 5px;
+    font-weight: 500;
+}
+
+#custom-spotify:hover {
+    background: linear-gradient(to bottom, rgb(0, 94, 0), transparent);
+}
+
+#tray {
+    margin-right: 3px;
 }

@@ -17,7 +17,12 @@
         "./modules/network.jsonc",
         "./modules/padding.jsonc",
         "./modules/battery.jsonc",
-        "./modules/idle_inhibitor.jsonc"
+        "./modules/idle_inhibitor.jsonc",
+        // "./modules/cava.jsonc",
+        "./modules/spotify.jsonc",
+        "./modules/bluetooth.jsonc",
+        "./modules/pulseaudio.jsonc",
+        "./modules/brightness.jsonc"
     ],
 
     "modules-left": [
@@ -32,8 +37,20 @@
         "clock"
     ],
     "modules-right": [
+        "custom/spotify",
+        "custom/padd",
+        // "custom/cava",       // Drains CPU as hell
+        "backlight",
+        "pulseaudio",
+        "bluetooth",
         "network",
         "battery",
-        "custom/padd"
-    ]
+        "custom/padd",
+        "tray"
+    ],
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 8
+    }
 }

@@ -10,9 +10,9 @@
             "mode": "month",
             "mode-mon-col": 3,
             "format": {
-                "months": "<span foreground='#89b4fa'><b>{}</b></span>",
-                "weekdays": "<span foreground='#f38ba8'><b>{}</b></span>",
-                "today": "<span foreground='#a6e3a1'><b>{}</b></span>"
+                "months": "<span foreground='#ff7b47'><b>{}</b></span>",
+                "weekdays": "<span foreground='wheat'><b>{}</b></span>",
+                "today": "<span foreground='#ff6e6e'><b>{}</b></span>"
             }
         }
     }
