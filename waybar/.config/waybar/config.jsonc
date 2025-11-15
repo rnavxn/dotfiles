@@ -4,7 +4,7 @@
     "output": ["*"],            // Show on all displays
     "height": 32,               // Waybar height (to be removed for auto height)
     "spacing": 4,               // Gaps between modules (4px)
-    "mode": "dock",             // Dock behavior
+    // "mode": "dock",             // Dock behavior
     "exclusive": true,
     "passthrough": false,       // Option to pass any pointer events to the window under the bar
     "reload_style_on_change": true,
