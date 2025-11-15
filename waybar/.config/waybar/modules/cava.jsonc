@@ -1,0 +1,7 @@
+{
+    "custom/cava": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/cava.sh",
+        "on-click": "playerctl pause | playerctl play"
+    }
+}
