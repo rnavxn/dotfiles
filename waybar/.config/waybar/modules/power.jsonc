@@ -1,0 +1,7 @@
+{
+    "custom/exit": {
+        "format": "",
+        "tooltip-format": "Power menu",
+        "on-click": "$HOME/.config/hypr/scripts/logout.sh"
+    }
+}

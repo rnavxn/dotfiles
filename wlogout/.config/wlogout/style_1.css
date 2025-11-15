@@ -37,7 +37,6 @@ window {
 }
 
 button {
-    /* color: ${BtnCol}; */
     color: #D8DEE9;
     background-color: #2E3440;
     outline-style: none;
@@ -58,8 +57,8 @@ button:focus {
 }
 
 button:hover {
-    /* background-color: @wb-hvr-bg; */
-    background-color: #FF4F4F;
+    /* background-color: #ff4f4f; */
+    background-color: rgba(0, 0, 0, 0.1);
     background-size: 40%;
     border-radius: ${active_rad}px;
     animation: gradient_f 20s ease-in infinite;

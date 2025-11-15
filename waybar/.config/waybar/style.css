@@ -14,6 +14,25 @@
     --wb-hvr-bg: #f5c2e7;
     --wb-hvr-fg: #313244;
 } */
+/* Little color pallete
+Base background (Nord)
+#2E3440  (Nord0)
+#3B4252  (Nord1)
+#434C5E  (Nord2)
+
+Text (Nord)
+#D8DEE9  (Nord4)
+#E5E9F0  (Nord5)
+#ECEFF4  (Nord6)
+
+Phoenix Accent (use sparingly)
+#FF4F4F   (Phoenix Red)
+#FF6E6E   (Soft Phoenix)
+#FF3B30   (Fire Red)
+
+Optional Amber Glow (Phoenix flame highlight)
+#FF9A55   (subtle)
+#FFA76A   (glow) */
 
 @define-color main-bg rgba(0, 0, 0, 0.7);
 @define-color main-fg #cdd6f4;
@@ -114,12 +133,14 @@ tooltip label {
 #pulseaudio,
 #bluetooth,
 #network,
-#battery {
+#battery,
+#custom-exit {
     color: white;
     min-width: 30px;
     margin: 0px;
     font-size: 16px;
-    /* background-color: navy;        This line is used to see icon alignments */
+    /* background-color: navy; */
+    /* This above line is used to see icon alignments */
 }
 
 #backlight {
@@ -128,12 +149,12 @@ tooltip label {
 
 #network {
     margin-left: -5px;
-    /* padding-right: 5px; */
 }
 
 #battery {
     font-weight: normal;
     font-family: Inter;
+    margin-right: -5px;
 }
 
 @keyframes blink {
@@ -168,5 +189,14 @@ tooltip label {
 }
 
 #tray {
-    margin-right: 3px;
+    
+}
+
+#custom-exit {
+    padding-right: 3px;
+    margin-left: 0px;
+}
+
+#custom-exit:hover {
+    background: linear-gradient(to bottom, #FF4F4F, transparent);
 }

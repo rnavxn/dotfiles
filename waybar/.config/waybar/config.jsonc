@@ -10,19 +10,20 @@
     "reload_style_on_change": true,
 
     "include": [
-        "./modules/workspaces.jsonc",
-        "./modules/clock.jsonc",
-        "./modules/phoenix.jsonc",
-        "./modules/taskbar.jsonc",
-        "./modules/network.jsonc",
-        "./modules/padding.jsonc",
-        "./modules/battery.jsonc",
-        "./modules/idle_inhibitor.jsonc",
-        // "./modules/cava.jsonc",
-        "./modules/spotify.jsonc",
-        "./modules/bluetooth.jsonc",
-        "./modules/pulseaudio.jsonc",
-        "./modules/brightness.jsonc"
+        "$HOME/.config/waybar/modules/workspaces.jsonc",
+        "$HOME/.config/waybar/modules/clock.jsonc",
+        "$HOME/.config/waybar/modules/phoenix.jsonc",
+        "$HOME/.config/waybar/modules/taskbar.jsonc",
+        "$HOME/.config/waybar/modules/network.jsonc",
+        "$HOME/.config/waybar/modules/padding.jsonc",
+        "$HOME/.config/waybar/modules/battery.jsonc",
+        "$HOME/.config/waybar/modules/idle_inhibitor.jsonc",
+        // "$HOME/.config/waybar/modules/cava.jsonc",
+        "$HOME/.config/waybar/modules/spotify.jsonc",
+        "$HOME/.config/waybar/modules/bluetooth.jsonc",
+        "$HOME/.config/waybar/modules/pulseaudio.jsonc",
+        "$HOME/.config/waybar/modules/brightness.jsonc",
+        "$HOME/.config/waybar/modules/power.jsonc"
     ],
 
     "modules-left": [
@@ -45,8 +46,8 @@
         "bluetooth",
         "network",
         "battery",
-        "custom/padd",
-        "tray"
+        "tray",
+        "custom/exit"
     ],
 
     "tray": {
