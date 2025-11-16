@@ -8,25 +8,29 @@
         "icon-size": 26,
         "icon-theme": "Tela-nord-dark",
         "spacing": 0,
-        "tooltip-format": "{title}{app_id}",
-        // "on-click": "activate",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
         "on-click-right": "fullscreen",
         "on-click-middle": "close",
         "ignore-list": [
             ""
+            // "brave-browser"
             //"Spotify Free"
         ],
         "app_ids-mapping": {
             "firefoxdeveloperedition": "firefox-developer-edition",
             "firefoxnightly": "firefox-nightly",
-            "Spotify Free": "Spotify"
+            "Spotify Free": "Spotify",
+            "org.kde.dolphin": "dolphin",
+            "brave-browser": "brave"
         },
         "rewrite": {
             "Firefox Web Browser": "Firefox",
             "Foot Server": "Terminal",
             "Spotify Free": "Spotify",
-            "org.kde.dolphin": "dolphin",
-            "libreoffice-writer": "writer"
+            "org.kde.dolphin": "Dolphin",
+            "libreoffice-writer": "Writer",
+            "Visual Studio Code": "Codium"
         }
     }
 }

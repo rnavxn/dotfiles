@@ -6,14 +6,6 @@
     font-size: 12px;
 }
 
-/* :root {
-    --main-bg: #11111b;
-    --main-fg: #cdd6f4;
-    --wb-act-bg: #a6adc8;
-    --wb-act-fg: #313244;
-    --wb-hvr-bg: #f5c2e7;
-    --wb-hvr-fg: #313244;
-} */
 /* Little color pallete
 Base background (Nord)
 #2E3440  (Nord0)
@@ -154,7 +146,6 @@ tooltip label {
 #battery {
     font-weight: normal;
     font-family: Inter;
-    margin-right: -5px;
 }
 
 @keyframes blink {
