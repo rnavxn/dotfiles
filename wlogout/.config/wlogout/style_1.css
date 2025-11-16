@@ -38,7 +38,8 @@ window {
 
 button {
     color: #D8DEE9;
-    background-color: #2E3440;
+    /* background-color: #2E3440; */
+    background-color: rgba(46, 52, 64, 0.75);
     outline-style: none;
     border: none;
     border-width: 0px;
@@ -52,13 +53,14 @@ button {
 }
 
 button:focus {
-    background-color: #FF6E6E;
+    /* background-color: #FF6E6E; */
+    background-color: rgba(255, 110, 110, 0.5);
     background-size: 30%;
 }
 
 button:hover {
     /* background-color: #ff4f4f; */
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.25);
     background-size: 40%;
     border-radius: ${active_rad}px;
     animation: gradient_f 20s ease-in infinite;
