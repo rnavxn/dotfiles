@@ -26,7 +26,7 @@ Optional Amber Glow (Phoenix flame highlight)
 #FF9A55   (subtle)
 #FFA76A   (glow) */
 
-@define-color main-bg rgba(0, 0, 0, 0.7);
+@define-color main-bg rgba(0, 0, 0, 0.3);
 @define-color main-fg #cdd6f4;
 
 @define-color wb-act-bg #a6adc8;
@@ -36,7 +36,7 @@ Optional Amber Glow (Phoenix flame highlight)
 @define-color wb-hvr-fg #313244;
 
 window#waybar {
-    background: transparent;
+    background: @main-bg;
 }
 
 tooltip {
@@ -121,9 +121,9 @@ tooltip label {
     letter-spacing: 0px;
 }
 
+#custom-updates,
 #backlight,
 #pulseaudio,
-#bluetooth,
 #network,
 #battery,
 #custom-exit {
@@ -136,11 +136,12 @@ tooltip label {
 }
 
 #backlight {
-    margin: 0px -20px;
+    margin: 0px -17px;
+    padding-left: 2px;
 }
 
 #network {
-    margin-left: -5px;
+    padding-right: 3px;
 }
 
 #battery {
@@ -185,7 +186,7 @@ tooltip label {
 
 #custom-exit {
     padding-right: 3px;
-    margin-left: 0px;
+    /* margin-left: 0px; */
 }
 
 #custom-exit:hover {

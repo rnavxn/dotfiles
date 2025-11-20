@@ -23,7 +23,8 @@
         "$HOME/.config/waybar/modules/bluetooth.jsonc",
         "$HOME/.config/waybar/modules/pulseaudio.jsonc",
         "$HOME/.config/waybar/modules/brightness.jsonc",
-        "$HOME/.config/waybar/modules/power.jsonc"
+        "$HOME/.config/waybar/modules/power.jsonc",
+        "$HOME/.config/waybar/modules/updates.jsonc"
     ],
 
     "modules-left": [
@@ -41,6 +42,7 @@
         "custom/spotify",
         "custom/padd",
         // "custom/cava",       // Drains CPU as hell
+        "custom/updates",
         "backlight",
         "pulseaudio",
         "bluetooth",

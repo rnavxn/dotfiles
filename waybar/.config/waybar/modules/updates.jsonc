@@ -1,0 +1,9 @@
+{
+    "custom/updates": {
+        "format": "",
+        "tooltip": false,
+        "on-click": "$HOME/.config/hypr/scripts/arch_update.sh",
+        "interval": 3600,
+        "exec": "checkupdates | wc -l"
+    }
+}
