@@ -1,7 +1,7 @@
 [global]
 # General
 origin = top-right          # Position
-offset = (20,20)            # horizontal offset from left, vertical from top
+offset = (20,50)            # horizontal offset from left, vertical from top
 width = 300
 height = (0, 300)
 horizontal_padding = 10     # Padding between text and edges
