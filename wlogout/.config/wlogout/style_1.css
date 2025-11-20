@@ -9,7 +9,8 @@
 @define-color wb-act-bg #a6adc8;
 @define-color wb-act-fg #313244;
 
-@define-color wb-hvr-bg #ff3b30;
+@define-color wb-hvr-bg #ff3b30;    /* background-color: rgba(46, 52, 64, 0.75); */
+
 @define-color wb-hvr-fg #313244;
 
 /* Little color pallete
@@ -38,8 +39,7 @@ window {
 
 button {
     color: #D8DEE9;
-    /* background-color: #2E3440; */
-    background-color: rgba(46, 52, 64, 0.75);
+    background-color: rgba(0, 0, 0, 0.75);
     outline-style: none;
     border: none;
     border-width: 0px;
@@ -53,14 +53,12 @@ button {
 }
 
 button:focus {
-    /* background-color: #FF6E6E; */
-    background-color: rgba(255, 110, 110, 0.5);
+    background-color: #2E3440;
     background-size: 30%;
 }
 
 button:hover {
-    /* background-color: #ff4f4f; */
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: #FF4F4F;
     background-size: 40%;
     border-radius: ${active_rad}px;
     animation: gradient_f 20s ease-in infinite;
