@@ -15,6 +15,7 @@
         "ignore-list": [
             ""
             // "brave-browser"
+            // "brave"
             //"Spotify Free"
         ],
         "app_ids-mapping": {
