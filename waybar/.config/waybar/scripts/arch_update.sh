@@ -1,26 +1,42 @@
 #!/usr/bin/env bash
 
+set -e
+
+notify() {
+    notify-send -u low -a "System Update" -i "$2" "$1"
+}
+
 # Detect AUR helper
 if command -v paru >/dev/null 2>&1; then
-    AUR_HELPER="paru"
+    CMD=(paru -Syu)
 elif command -v yay >/dev/null 2>&1; then
-    AUR_HELPER="yay"
+    CMD=(yay -Syu)
 else
-    echo "No AUR helper found"
-    AUR_HELPER="sudo pacman"
-    # exit 1
+    CMD=(sudo pacman -Syu)
 fi
 
-# Run update
-notifier="notify-send -u low -a System Update"
+# Temp file to store exit code
+STATUS_FILE="/tmp/update_status_$USER"
+rm -f "$STATUS_FILE"
 
-$notifier "Updating system..."
+notify "Updating system..." "system-software-update"
 
-# You can also use --noconfirm if you want it fully auto.
-kitty -e $AUR_HELPER -Syu
+# Run inside kitty and capture exit status
+kitty -e bash -c "
+    ${CMD[@]}
+    echo \$? > $STATUS_FILE
+"
 
-if [ $? -eq 0 ]; then
-    $notifier "Update complete!"
+# Read exit code
+if [[ -f "$STATUS_FILE" ]]; then
+    EXIT_CODE=$(cat "$STATUS_FILE")
 else
-    $notifier "Update failed!"
+    # Kitty killed (Ctrl+C before_script runs) → treat as fail
+    EXIT_CODE=1
+fi
+
+if [[ $EXIT_CODE -eq 0 ]]; then
+    notify "Update complete!" "dialog-ok"
+else
+    notify "Update failed!" "dialog-error"
 fi
