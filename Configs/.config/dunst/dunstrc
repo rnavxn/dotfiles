@@ -73,3 +73,11 @@ fullscreen = delay
 [fullscreen_show_critical]
 msg_urgency = critical
 fullscreen = show
+
+[fullscreen_show_volume]
+summary = "(Volume:|Muted)"
+fullscreen = show
+
+[fullscreen_show_brightness]
+summary = "(Brightness:)"
+fullscreen = show
