@@ -121,6 +121,15 @@ tooltip label {
     letter-spacing: 0px;
 }
 
+#mpris {
+    font-weight: 500;
+    padding: 0px 7px;
+}
+
+#mpris:hover {
+    background: linear-gradient(to bottom, @wb-act-bg, transparent);
+}
+
 #custom-updates,
 #backlight,
 #pulseaudio,

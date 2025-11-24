@@ -19,12 +19,13 @@
         "$HOME/.config/waybar/modules/battery.jsonc",
         "$HOME/.config/waybar/modules/idle_inhibitor.jsonc",
         // "$HOME/.config/waybar/modules/cava.jsonc",
-        "$HOME/.config/waybar/modules/spotify.jsonc",
         "$HOME/.config/waybar/modules/bluetooth.jsonc",
         "$HOME/.config/waybar/modules/pulseaudio.jsonc",
         "$HOME/.config/waybar/modules/brightness.jsonc",
         "$HOME/.config/waybar/modules/power.jsonc",
-        "$HOME/.config/waybar/modules/updates.jsonc"
+        "$HOME/.config/waybar/modules/updates.jsonc",
+        "$HOME/.config/waybar/modules/spotify.jsonc",
+        "$HOME/.config/waybar/modules/mpris.jsonc",
     ],
 
     "modules-left": [
@@ -39,9 +40,10 @@
         "clock"
     ],
     "modules-right": [
+        "mpris",
         "custom/spotify",
         "custom/padd",
-        // "custom/cava",       // Drains CPU as hell
+        // "custom/cava",       // Drains CPU in my case
         "custom/updates",
         "backlight",
         "pulseaudio",
