@@ -13,9 +13,9 @@
         "on-click-right": "fullscreen",
         "on-click-middle": "close",
         "ignore-list": [
-            ""
+            // ""
             // "brave-browser"
-            // "brave"
+            "brave"
             //"Spotify Free"
         ],
         "app_ids-mapping": {
