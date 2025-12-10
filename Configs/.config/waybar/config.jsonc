@@ -24,7 +24,7 @@
         "$HOME/.config/waybar/modules/brightness.jsonc",
         "$HOME/.config/waybar/modules/power.jsonc",
         "$HOME/.config/waybar/modules/updates.jsonc",
-        "$HOME/.config/waybar/modules/spotify.jsonc",
+        // "$HOME/.config/waybar/modules/spotify.jsonc",
         "$HOME/.config/waybar/modules/mpris.jsonc",
     ],
 
@@ -41,7 +41,7 @@
     ],
     "modules-right": [
         "mpris",
-        "custom/spotify",
+        // "custom/spotify",
         "custom/padd",
         // "custom/cava",       // Drains CPU in my case
         "custom/updates",
@@ -49,8 +49,8 @@
         "pulseaudio",
         "bluetooth",
         "network",
-        "battery",
         "tray",
+        "battery",
         "custom/exit"
     ],
 
